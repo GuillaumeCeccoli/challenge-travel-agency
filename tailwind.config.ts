@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        roboto: ["var(--font-roboto)", "Roboto"],
+        lemon: ["var(--font-lemon)", "Lemon"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

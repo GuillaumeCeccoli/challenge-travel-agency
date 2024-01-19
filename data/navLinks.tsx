@@ -20,6 +20,11 @@ export const navLinks: NavLinks[] = [
     href: "/",
     title: "A propos",
   },
+  {
+    id: "account",
+    href: "/",
+    title: "Mon compte",
+  },
 ];
 
 export function getNavLinks() {
