@@ -1,9 +1,8 @@
-import React from "react";
-import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Menu } from "lucide-react";
-import { getNavLinks } from "../../api/datas";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { getNavLinks } from "../../api/datas";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export default function NavBar() {
   const { links } = getNavLinks();
@@ -16,7 +15,9 @@ export default function NavBar() {
           width={60}
           height={60}
         />
-        <span className="text-sms">Viking-Tour</span>
+        <span className="text-base font-lemon whitespace-nowrap">
+          Viking-Tour
+        </span>
       </div>
       <div className="md:hidden flex flex-row justify-end items-center w-full">
         <Sheet>
@@ -36,7 +37,7 @@ export default function NavBar() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex md:flex-row md:items-center md:justify-around md:w-3/5">
+      <div className="hidden md:flex md:flex-row md:items-center md:justify-around md:w-3/5 xl:w-2/5">
         {links.map((link, id) => (
           <Link
             key={id}

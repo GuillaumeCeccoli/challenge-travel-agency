@@ -26,17 +26,17 @@ export default function Cards() {
   return (
     <article className="w-full flex flex-col items-center py-10 bg-gradient-to-b from-gray-300">
       <div className="w-full flex flex-row justify-around items-center mb-10">
-        <h2 className="font-roboto text-2xl italic sm:text-3xl xl:text-5xl">
+        <h2 className="font-roboto text-3xl italic xl:text-5xl">
           Où irez-vous ?
         </h2>
         <div className="flex flex-row justify-between">
           <ChevronLeft
-            size={40}
+            size={55}
             className="cursor-pointer hover:text-gray-400 transition-colors duration-300"
             onClick={previous}
           />
           <ChevronRight
-            size={40}
+            size={55}
             className="cursor-pointer hover:text-gray-400 hover:transition-colors hover:duration-300"
             onClick={next}
           />
@@ -74,12 +74,12 @@ export default function Cards() {
                       className="object-cover opacity-75 h-[450px] w-full"
                     />
                   </div>
-                  <div className="absolute inset-1/2 flex flex-col items-center text-white text-xl">
-                    <div className="bg-[#d6d6d6] bg-opacity-40 rounded-xl text-center p-4 hover:text-black hover:font-bold transition-colors duration-300">
+                  <div className="absolute inset-1/2 flex flex-col items-center text-black text-xl">
+                    <div className="bg-[#d6d6d6] bg-opacity-40 rounded-xl text-center p-4">
                       <h2 className="font-lemon text-2xl">{card.title}</h2>
                       <Link
                         href={card.link}
-                        className="font-roboto whitespace-nowrap "
+                        className="font-roboto whitespace-nowrap hover:text-white hover:font-bold transition-colors duration-300"
                       >
                         Explorez !
                       </Link>
