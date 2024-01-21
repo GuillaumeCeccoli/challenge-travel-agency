@@ -2,14 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../components/widgets/navbar";
 import { ChevronsDownIcon } from "lucide-react";
+import Cards from "../components/widgets/cards";
 
 export default function Home() {
   return (
-    <main className="h-screen relative font-roboto w-full">
-      <header className="w-full">
+    <main className="h-screen font-roboto w-full">
+      <header className="h-full">
         <NavBar />
-      </header>
-      <section>
         <Image
           src="/imgs/newback.jpg"
           alt="Une photo de la scandinanvie"
@@ -33,6 +32,9 @@ export default function Home() {
             </h1>
           </div>
         </article>
+      </header>
+      <section>
+        <Cards />
       </section>
     </main>
   );

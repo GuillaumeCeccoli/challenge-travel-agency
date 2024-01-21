@@ -1,12 +1,12 @@
 import React from "react";
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Menu } from "lucide-react";
-import { getNavLinks } from "../../data/navLinks";
+import { getNavLinks } from "../../api/datas";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function NavBar() {
-  const navLinks = getNavLinks();
+  const { links } = getNavLinks();
   return (
     <nav className="relative flex flex-row items-center justify-around bg-gray-100 bg-opacity-30 w-full">
       <div className="flex flex-row items-center justify-between w-60 sm:w-52 md:w-40">
@@ -24,20 +24,20 @@ export default function NavBar() {
             <Menu size={40} />
           </SheetTrigger>
           <SheetContent className="flex flex-col items-start gap-5">
-            {navLinks.map((links, id) => (
+            {links.map((link, id) => (
               <Link
-                href={links.href}
+                href={link.href}
                 key={id}
                 className="flex flex-row items-center justify-between w-40 mx-4"
               >
-                {links.title}
+                {link.title}
               </Link>
             ))}
           </SheetContent>
         </Sheet>
       </div>
       <div className="hidden md:flex md:flex-row md:items-center md:justify-around md:w-3/5">
-        {navLinks.map((link, id) => (
+        {links.map((link, id) => (
           <Link
             key={id}
             href={link.href}

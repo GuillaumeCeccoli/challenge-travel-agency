@@ -85,6 +85,31 @@
   .underline-from-center:hover::after {
     width: 50%;
   }
+
+  .custom-shadow {
+    box-shadow: 5px 5px 10px #808080;
+  }
+
+  .scale-on-hover {
+    transition: transform 500ms ease-in-out;
+  }
+
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+  }
+
+  .fade {
+    transition: opacity 500ms ease-out;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }
 
 @layer base {
