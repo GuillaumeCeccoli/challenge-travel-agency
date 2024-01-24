@@ -46,7 +46,8 @@ export default function Home() {
             </h2>
             <p className="py-5 lg:py-20">
               Notre vision du voyage est de faire en sorte que notre planning
-              soit le plus flexible possible.
+              soit le plus flexible possible. Pour s&apos;adapter à vos envies,
+              nous vous proposons des voyages sur mesure.
             </p>
             <Button className="bg-black text-white font-lemon hover:shadow-lg hover:text-gray-500">
               En savoir plus !
