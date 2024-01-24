@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Gallery from "@/components/widgets/gallery";
 import { ChevronsDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,17 +38,17 @@ export default function Home() {
       <section>
         <Cards />
       </section>
-      <section className="py-16 flex flex-col items-center bg-gray-300 bg-opacity-40">
+      <section className="py-16 flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-400">
         <article className="relative w-4/5 flex flex-col items-center gap-5 md:flex-row-reverse md:justify-around xl:w-3/5">
           <div className="self-start w-full pb-10 sm:w-4/5 md:w-3/5 md:p-6 xl:w-1/3">
             <h2 className="font-lemon text-xl">
               Explorez la Scandinavie en toute sérénité !
             </h2>
-            <p className="py-5 xl:py-20">
+            <p className="py-5 lg:py-20">
               Notre vision du voyage est de faire en sorte que notre planning
               soit le plus flexible possible.
             </p>
-            <Button className="bg-gray-300 text-black font-lemon hover:shadow-lg hover:bg-gray-300">
+            <Button className="bg-black text-white font-lemon hover:shadow-lg hover:text-gray-500">
               En savoir plus !
             </Button>
           </div>
@@ -56,9 +57,15 @@ export default function Home() {
             alt="Une famille qui boit un coup au bord d'un lac en pleine nature."
             width={640}
             height={480}
-            className="rounded-xl custom-shadow sm:w-3/5 lg:w-1/2 xl:w-3/12"
+            className="rounded-xl custom-shadow sm:w-3/5 lg:w-1/4 scale-on-hover"
           />
         </article>
+      </section>
+      <section className="my-20 w-full">
+        <h2 className="font-lemon text-center pb-10 w-4/5 mx-auto md:text-xl xl:text-2xl">
+          Quelques photos prises par nos experts.
+        </h2>
+        <Gallery />
       </section>
     </main>
   );
