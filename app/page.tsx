@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Avis from "@/components/widgets/avis";
 import Gallery from "@/components/widgets/gallery";
 import { ChevronsDownIcon } from "lucide-react";
 import Image from "next/image";
@@ -67,6 +68,12 @@ export default function Home() {
           Quelques photos prises par nos experts.
         </h2>
         <Gallery />
+      </section>
+      <section className="flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-400 py-10">
+        <h2 className="font-lemon lg:text-2xl">
+          Ils nous ont fait confiance !
+        </h2>
+        <Avis />
       </section>
     </main>
   );

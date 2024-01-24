@@ -117,10 +117,46 @@ export const galleryImages: GalleryImages[] = [
   },
 ];
 
+export type Avis = {
+  id: string;
+  firstname: string;
+  photo: string;
+  comment: string;
+  rate: number;
+};
+
+export const avis: Avis[] = [
+  {
+    id: "sarah",
+    firstname: "Sarah",
+    photo: "/photos/sarah.jpg",
+    comment:
+      "Nous n'avons pas été déçu de notre voyage avec Viking-Tour, un planning flexible et des guides fabuleux ! Je recommande !",
+    rate: 5,
+  },
+  {
+    id: "charles",
+    firstname: "Charles",
+    photo: "/photos/charles.jpg",
+    comment:
+      "Un voyage inoubliable, des paysages à couper le souffle ! Une organisation parfaite ! Rien à dire !",
+    rate: 4,
+  },
+  {
+    id: "lucie",
+    firstname: "Lucie",
+    photo: "/photos/lucie.jpg",
+    comment:
+      "Mon mari m'a fait la surprise pour mon anniversaire, c'était une expérience inoubliable ! Je recommande !",
+    rate: 5,
+  },
+];
+
 export function getNavLinks() {
   const links = navLinks as NavLinks[];
   const cards = cardsInfos as CardInfos[];
   const gallery = galleryImages as GalleryImages[];
-  return { links, cards, galleryImages };
+  const avisTravellers = avis as Avis[];
+  return { links, cards, gallery, avisTravellers };
 }
 
