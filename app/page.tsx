@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Avis from "@/components/widgets/avis";
+import Footer from "@/components/widgets/footer";
 import Gallery from "@/components/widgets/gallery";
 import { ChevronsDownIcon } from "lucide-react";
 import Image from "next/image";
@@ -75,6 +76,7 @@ export default function Home() {
         </h2>
         <Avis />
       </section>
+      <Footer />
     </main>
   );
 }
