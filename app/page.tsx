@@ -37,10 +37,13 @@ export default function Home() {
           </div>
         </article>
       </header>
-      <section>
+      <section id="destinations">
         <Cards />
       </section>
-      <section className="py-16 flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-400">
+      <section
+        className="py-16 flex flex-col items-center bg-gradient-to-b from-gray-100 to-gray-400"
+        id="about"
+      >
         <article className="relative w-4/5 flex flex-col items-center gap-5 md:flex-row-reverse md:justify-around xl:w-3/5">
           <div className="self-start w-full pb-10 sm:w-4/5 md:w-3/5 md:p-6 xl:w-1/3">
             <h2 className="font-lemon text-xl">
@@ -64,7 +67,7 @@ export default function Home() {
           />
         </article>
       </section>
-      <section className="my-20 w-full">
+      <section className="my-20 w-full" id="gallery">
         <h2 className="font-lemon text-center pb-10 w-4/5 mx-auto md:text-xl xl:text-2xl">
           Quelques photos prises par nos experts.
         </h2>

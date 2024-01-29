@@ -1,13 +1,20 @@
+"use client";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getNavLinks } from "../../api/datas";
+import useScrollHook from "../../lib/hook/scrollHook";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export default function NavBar() {
   const { links } = getNavLinks();
+  const { scroll } = useScrollHook();
   return (
-    <nav className="relative flex flex-row items-center justify-around bg-gray-100 bg-opacity-30 w-full">
+    <nav
+      className={`fixed flex flex-row items-center justify-around bg-gray-100 bg-opacity-30 w-full z-10 ${
+        scroll ? "sm:bg-gray-100" : "sm:bg-transparent"
+      }`}
+    >
       <div className="flex flex-row items-center justify-between w-60 sm:w-52 md:w-40">
         <Image
           src="/logo/viking.svg"
@@ -42,7 +49,7 @@ export default function NavBar() {
           <Link
             key={id}
             href={link.href}
-            className="hover:text-gray-400 underline-from-center relative flex flex-row items-center justify-between"
+            className="hover:text-slate-500 underline-from-center relative flex flex-row items-center justify-between"
           >
             {link.title}
           </Link>

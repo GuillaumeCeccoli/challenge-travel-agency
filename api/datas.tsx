@@ -12,13 +12,18 @@ export const navLinks: NavLinks[] = [
   },
   {
     id: "destinations",
-    href: "/",
+    href: "/#destinations",
     title: "Destinations",
   },
   {
     id: "about",
-    href: "/",
+    href: "/#about",
     title: "A propos",
+  },
+  {
+    id: "gallery",
+    href: "/#gallery",
+    title: "Galerie",
   },
   {
     id: "account",
